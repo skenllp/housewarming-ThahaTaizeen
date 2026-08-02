@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ==========================================
-     AUDIO — defined first so openDoors can call setAudioIcon
-  ========================================== */
+     AUDIO — commented out
+  ==========================================
   const bgAudio = document.getElementById('bg-audio');
   const audioToggle = document.getElementById('audio-toggle');
   const audioIcon = document.getElementById('audio-icon');
@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     bgAudio.addEventListener('pause', () => setAudioIcon(false));
     bgAudio.addEventListener('play', () => setAudioIcon(true));
   }
+  ==========================================*/
 
   /* ==========================================
      0. INTRO SEQUENCE — loader -> opening doors (wait for tap) -> hero
@@ -65,13 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
     opening.removeEventListener('click', openDoors);
     opening.removeEventListener('keydown', onOpeningKey);
 
-    // Start background music on tap — this respects browser autoplay policy
-    // because it's triggered by a direct user gesture
-    if (bgAudio) {
-      bgAudio.play()
-        .then(() => setAudioIcon(true))
-        .catch(() => { /* autoplay blocked — user can tap the nav music button */ });
-    }
+    // Music disabled
+    // if (bgAudio) {
+    //   bgAudio.play()
+    //     .then(() => setAudioIcon(true))
+    //     .catch(() => { /* autoplay blocked */ });
+    // }
 
     window.setTimeout(finishIntro, prefersReducedMotion ? 0 : 1150);
   }

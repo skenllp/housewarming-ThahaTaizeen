@@ -78,7 +78,7 @@ input, textarea { font-family: inherit; }
   position: relative;
   padding: clamp(72px, 12vw, 140px) 0;
 }
-.details, .rsvp, .contact {
+.details, .rsvp {
   background:
     radial-gradient(circle at 6px 6px, rgba(184,146,61,0.16) 1px, transparent 1.4px) 0 0/32px 32px,
     var(--ivory);
@@ -598,29 +598,6 @@ input, textarea { font-family: inherit; }
 .rsvp-error p { color: #A94438; margin: 0 0 16px; }
 
 /* =====================================================
-   Contact
-===================================================== */
-.contact-grid { display: flex; justify-content: center; }
-.contact-card {
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  padding: 40px 44px;
-  text-align: center;
-  box-shadow: var(--shadow-card);
-  max-width: 320px;
-}
-.contact-avatar {
-  width: 62px; height: 62px; margin: 0 auto 16px;
-  border-radius: 50%; background: var(--emerald-tint);
-  display: flex; align-items: center; justify-content: center;
-}
-.contact-avatar svg { width: 26px; height: 26px; fill: var(--emerald); }
-.contact-name { font-family: var(--font-display); font-size: 1.3rem; color: var(--emerald); font-weight: 600; margin: 0 0 10px; }
-.contact-link { display: inline-flex; align-items: center; gap: 8px; font-size: 0.92rem; color: var(--gold); border-bottom: 1px solid transparent; transition: border-color 0.3s; }
-.contact-link:hover { border-color: var(--gold); }
-.contact-link svg { fill: currentColor; }
-
-/* =====================================================
    Footer
 ===================================================== */
 .footer {
@@ -634,6 +611,12 @@ input, textarea { font-family: inherit; }
 .footer-blessing { font-family: var(--font-display); font-style: italic; font-size: 1.35rem; max-width: 520px; margin: 0 auto 18px; line-height: 1.6; color: var(--gold-pale); }
 .footer-closing { font-family: var(--font-arabic); font-size: 1.15rem; margin: 0 0 40px; color: var(--ivory); }
 .footer-divider { width: 60px; height: 1px; background: rgba(255,255,255,0.25); margin: 0 auto 24px; }
+.footer-email {
+  display: inline-flex; align-items: center; gap: 7px;
+  color: rgba(251,246,236,0.75); font-size: 0.82rem; letter-spacing: 0.03em;
+  text-decoration: none; margin: 0 0 14px; transition: color 0.2s ease;
+}
+.footer-email:hover { color: var(--gold-light); }
 .footer-bottom { font-size: 0.78rem; letter-spacing: 0.04em; color: rgba(251,246,236,0.55); margin: 0; }
 
 /* =====================================================
@@ -718,9 +701,6 @@ input, textarea { font-family: inherit; }
   /* Map */
   .map-frame { aspect-ratio: 1/1; }
   .map-card { padding: 10px; }
-
-  /* Contact */
-  .contact-card { padding: 32px 26px; }
 
   /* RSVP */
   .attend-options { flex-direction: column; }

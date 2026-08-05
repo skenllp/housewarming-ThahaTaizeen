@@ -127,9 +127,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ==========================================
      2. LIVE COUNTDOWN TIMER
-     Target: 14 August 2026, 11:30 AM IST
+     Target: 14 August 2026, 04:30 PM IST
   ========================================== */
-  const targetDate = new Date('2026-08-14T11:30:00+05:30').getTime();
+  const targetDate = new Date('2026-08-14T16:30:00+05:30').getTime();
   const daysEl = document.getElementById('days');
   const hoursEl = document.getElementById('hours');
   const minutesEl = document.getElementById('minutes');

@@ -466,7 +466,7 @@ input, textarea { font-family: inherit; }
 ===================================================== */
 .details-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 22px;
 }
 .detail-card {
@@ -611,12 +611,22 @@ input, textarea { font-family: inherit; }
 .footer-blessing { font-family: var(--font-display); font-style: italic; font-size: 1.35rem; max-width: 520px; margin: 0 auto 18px; line-height: 1.6; color: var(--gold-pale); }
 .footer-closing { font-family: var(--font-arabic); font-size: 1.15rem; margin: 0 0 40px; color: var(--ivory); }
 .footer-divider { width: 60px; height: 1px; background: rgba(255,255,255,0.25); margin: 0 auto 24px; }
-.footer-email {
+.footer-contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 0 0 16px;
+}
+.footer-contact {
   display: inline-flex; align-items: center; gap: 7px;
   color: rgba(251,246,236,0.75); font-size: 0.82rem; letter-spacing: 0.03em;
-  text-decoration: none; margin: 0 0 14px; transition: color 0.2s ease;
+  text-decoration: none; transition: color 0.2s ease;
 }
-.footer-email:hover { color: var(--gold-light); }
+.footer-contact:hover { color: var(--gold-light); }
+.contact-link { color: var(--emerald); text-decoration: none; font-weight: 500; transition: color 0.2s ease; }
+.contact-link:hover { color: var(--gold); text-decoration: underline; }
 .footer-bottom { font-size: 0.78rem; letter-spacing: 0.04em; color: rgba(251,246,236,0.55); margin: 0; }
 
 /* =====================================================
@@ -632,6 +642,7 @@ input, textarea { font-family: inherit; }
 [data-reveal-delay="1"] { transition-delay: 0.12s; }
 [data-reveal-delay="2"] { transition-delay: 0.24s; }
 [data-reveal-delay="3"] { transition-delay: 0.36s; }
+[data-reveal-delay="4"] { transition-delay: 0.48s; }
 
 /* =====================================================
    Responsive
